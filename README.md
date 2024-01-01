@@ -22,7 +22,7 @@ Clone the project
 ```bash
 git clone https://github.com/obrien-lab-psu/Non-covalent-Lasso-Entanglements-in-Folded-Proteins-Prevalence-Functional-Implications-and-Evolut.git
 ```
-Please make sure to install Python 3.9 or higher and the neccessary packages/modules using: 
+Please make sure to install Python version >= 3.9 and <=3.10. At the time of last update, the upper version limit was due to the Numba dependency. All the neccessary packages/modules can be installed using: 
 
 ```bash 
 pip install -r requirements.txt
@@ -39,7 +39,7 @@ To generate entanglements, please follow these steps under the `Entanglement_cod
 2. Run the entanglement code
 
 ```python 
-python guassian_entanglement.py
+python gaussian_entanglement_v4.5.py
 ```
 The output is located in `unmapped_GE` directory. 
 
@@ -73,8 +73,13 @@ Code and Data for the enrichment tests are located in the Ecoli, Yeast and Human
   individual_analysis.py ---> Structural enrichment test
   
   All the data required to run these tests are located under DATA/ folder for each organism. 
-  They were obtained as described in the Methods. 
+  They were obtained as described in the Methods.
 ```
+### Note for the Structural enrichement tests. 
+All the p-values have been calculated already, so running the code will not do anything.
+Why? The code check the `DATA` folder if a p-value has been calculated. If so, the code will not run. 
+Please provide new input if you plan to use the code. 
+
 ## Entanglement Demo
 
 An example has been calculated for the <u>E.coli 50S ribosomal subunit</u> (**PDB ID**: 6XZ7 chain S)
